@@ -1,9 +1,9 @@
-mkdir /home/prometheus;
-cd /home/prometheus;
-wget https://github.com/prometheus/prometheus/releases/download/v2.3.2/prometheus-2.3.2.linux-amd64.tar.gz ;
-tar -xvf prometheus-2.3.2.linux-amd64.tar.gz ;
-mv prometheus-2.3.2.linux-amd64 prometheus;
-cp  prometheus.service /etc/systemd/system/prometheus.service;
+sudo mkdir /home/prometheus;
+sudo cd /home/prometheus;
+sudo wget https://github.com/prometheus/prometheus/releases/download/v2.3.2/prometheus-2.3.2.linux-amd64.tar.gz ;
+sudo tar -xvf prometheus-2.3.2.linux-amd64.tar.gz ;
+sudo mv prometheus-2.3.2.linux-amd64 prometheus;
+sudo cp  prometheus.service /etc/systemd/system/prometheus.service;
 sudo systemctl daemon-reload;
 sudo systemctl start prometheus;
 sudo systemctl status prometheus;
